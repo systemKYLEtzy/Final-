@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCUVERTER</title>
+    <link rel="icon" type="image/x-icon" href="calcu.jpeg">
+<link rel="stylesheet" href="finals.css">
+</head>
+<body>
+    <header >
+        <h1 onclick="showSection('home1')"style="cursor: pointer;" title="To Home Page">CALCULATOR & CONVERTER TOOL</h1>
+    </header>
+
+    <nav>
+        <button onclick="showSection('calcu')" title="To Calculator Page">CALCULATOR</button>
+        <button onclick="showSection('convert')" title="To Length Coverter Page">LENGTH CONVERTER</button>
+        <button onclick="showSection('aboutus')" title="To Developers Page">ABOUT US</button>
+    </nav>
+
+    <section id="home1">
+
+        <h1>WELCOME TO CALCULATOR AND CONVERTER TOOL </h1>
+        <h3>CALCULATOR</h3>
+        <h4>What is calculator history? </h4>
+        <p>-The Renaissance saw the invention of the mechanical calculator by Wilhelm Schickard in 1623, and later by Blaise Pascal in 1642. A device that was at times somewhat over-promoted as being able to perform all four arithmetic operations with minimal human intervention.</p>
+        <br>
+        <h4>Who invented first calculator?</h4>
+        <img src="TexasInstrument.jpeg" alt="TexasInstrument">
+        <img src="Jack_Kilby.jpeg" alt="Jack_Kilby">
+        <img src="Edith_Clarke.jpeg" alt="Edith_Clarke">
+        <br>
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.ti.com/" target="_blank" title="This takes you on Google">Texas Instrument</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://en.wikipedia.org/wiki/Jack_Kilby" target="_blank" title="This takes you on Google">Jack Kilby</a>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://en.wikipedia.org/wiki/Edith_Clarke" target="_blank" title="This Takes you on Google">Edith Clarke</a>
+        </p>
+        <br>
+        <h4>What is the history of calculating machines?</h4>
+        <p>The earliest known calculating device is probably the abacus. It dates back at least to 1100 bce and is still in use today, particularly in Asia. Now, as then, it typically consists of a rectangular frame with thin parallel rods strung with beads.</p>
+        <img src="calculating.jpeg" alt="calculating">
+        <br>
+        <h4>How did the calculator impact society?</h4>
+        <p>In the course of the 1970s, handheld electronic calculators transformed the way tens of millions of people did arithmetic. Engineers abandoned slide rules, business people gave up desktop calculating machines, and shoppers replaced simple adding machines and adders.</p>
+        <br>
+        <h4>What is the name of the ancient calculator?</h4>
+        <p>An abacus is a device composed of beads that slide along rods, which fit into a frame. In ancient times, the abacus was used as a calculator; it aided in performing mathematical processes like counting, addition, subtraction, and multiplication.</p>
+        <img src="abacus.jpeg" alt="abacus">
+        <p>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="https://www.cuemath.com/learn/abacus-history/" target="_blank" title="This takes you on Google">ABACUS</a>
+        </p>
+        <br>
+        <h3>LENGTH CONVERTER</h3>
+        <h4>What is the history of length?</h4>
+        <p>The way base units of length have been determined has changed greatly over time. Long ago, the base for reference was the human body. For example, the cubit was a unit that indicated the length from the elbow to the fingertips. This unit was used in ancient cultures in Mesopotamia, Egypt, and Rome.</p>
+        <img src="length.jpeg" alt="length">
+        <h4>What is the history of the meter length?</h4>
+        <p>On March 30, 1791, the French Academy of Sciences defined the length of a meter. Before this date, there were two definitions to this measure of length: The first was based on the length of a pendulum and the second was based on a fraction of the length of a half-meridian, or line of longitude.</p>
+        <img src="measure.jpeg" alt="measure">
+        <h4>What is the conversion system of length?</h4>
+        <p>In the metric system, units for length are kilometres (km), metres (m), centimetres (cm), and so on. The conversion of these units from one unit to another is referred to as the conversion of units for length. Thus, we can convert km to m, m to cm, cm to mm and vice versa.</p>
+        <img src="system.jpeg" alt="system">
+    </section>
+    <section id="calcu">
+        <div>
+            <input type="text" id="display" disabled>
+            <br>
+            <button onclick="appendCharacter('1')">1</button>
+            <button onclick="appendCharacter('2')">2</button>
+            <button onclick="appendCharacter('3')">3</button>
+            <button onclick="appendOperator('+')">+</button>
+            <br>
+            <button onclick="appendCharacter('4')">4</button>
+            <button onclick="appendCharacter('5')">5</button>
+            <button onclick="appendCharacter('6')">6</button>
+            <button onclick="appendOperator('-')">-</button>
+            <br>
+            <button onclick="appendCharacter('7')">7</button>
+            <button onclick="appendCharacter('8')">8</button>
+            <button onclick="appendCharacter('9')">9</button>
+            <button onclick="appendOperator('*')">*</button>
+            <br>
+            <button onclick="appendCharacter('0')">0</button>
+            <button onclick="appendDecimal()">.</button>
+            <button onclick="calculate()">=</button>
+            <button onclick="clearDisplay()">C</button>
+            <br>
+        </div>
+       
+    </section>
+
+
+    <section id="convert">
+        <div id="converter">
+
+            <table>
+    
+                <thead>
+                    <tr>
+                    <th colspan="2" style="text-align: right;"><h2 style="color: white;">Length Converter</h2></th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td rowspan="2"><input type="number" id="inputLength" placeholder="Enter length"></td>
+                    </tr>
+    
+                    <tr>
+                        <td>
+                        <label for="fromUnit" style="color: white;">From:</label>
+                        <select id="fromUnit">
+                        <option value="inches">Inches</option>
+                        <option value="centimeters">Centimeters</option>
+                        <option value="meters">Meters</option>
+                        <option value="kilometers">Kilometers</option>
+                        </select>
+                        </td>
+                         
+                        <td>
+                        <label for="toUnit" style="color: white;">To:</label> 
+                        <select id="toUnit">
+                        <option value="inches">Inches</option>
+                        <option value="centimeters">Centimeters</option>
+                        <option value="meters">Meters</option>
+                        <option value="kilometers">Kilometers</option>
+                        </select>
+                        </td>
+                    </tr>
+    
+                    <tr>
+                        <tr>
+                            <td>
+                            <label for="result">
+                            <input type="text" id="result" placeholder="Result" readonly>
+                            </label>
+                            </td>
+    
+                            <td style="text-align: center;" colspan="2">
+                            <button onclick="convertLength()" id="button2">Convert</button>
+                            </td>
+                        </tr>
+                    </tr>
+                </tbody>
+    
+            </table>
+            
+            
+        </div>
+       
+    </section>
+    <section id="aboutus">
+        <p>The innovative creator of the simple calculator and converter webpage <br>has skillfully crafted a user-friendly digital tool that <br> transforms complex calculations into effortless solutions for users worldwide.</p>
+        <h1>DEVELOPERS</h1>
+        
+            <div class="researcher-info">
+                <img src="kyle.jpeg" alt="kyle"><br>
+                <a href="https://www.facebook.com/kyle.lacs" target="kyle" title="This takes you to Facebook page">Name: JOHN KYLE VILLANUEVA LACSINA</a>
+                <p>School: NUEVA ECIJA UNIVERSITY OF SCIENCE AND TECHNOLOGY</p>
+                <p>Address: BRGY. SACDALAN, SAN MIGUEL, BULACAN</p>
+                <p>Birthday: AUGUST 19, 2001</p>
+                <p>Age: 22 YEARS OLD</p>
+                <a href="mailto:johnkylelacsina19@gmail.com" target="_blank" title="To email this person">Email: johnkylelacsina19@gmail.com</a>
+                <p>Contact No.: 0915-857-3929</p>
+            </div>
+            <div class="researcher-info1">
+                <img src="nel.jpeg" alt="nel"><br>
+                <a href="https://www.facebook.com/nel.gersan" target="nel" title="This takes you to Facebook page">Name: ARNEL G. OTERO</a>
+                <p>School: NUEVA ECIJA UNIVERSITY OF SCIENCE AND TECHNOLOGY SLOC</p>
+                <p>Address: BRGY. MALLORCA, SAN LEONARDO, NUEVA ECIJA</p>
+                <p>Birthday: JULY 10, 2001</p>
+                <p>Age: 22 YEARS OLD</p>
+                <a href="mailto:nelnelotero2001@gmail.com" target="_blank" title="To email this person">Email: nelnelotero2001@gmail.com</a>
+                <p>Contact No.: 0949-820-3381</p>
+            </div>
+            <div class="researcher-info2">
+                <img src="ivy.jpeg" alt="ivy"><br>
+                <a href="https://www.facebook.com/Id.pactao.22" target="ivy" title="This takes you to Facebook page">Name: IVY JOY DELA CRUZ PACTAO</a>
+                <p>School: NUEVA ECIJA UNIVERSITY OF SCIENCE AND TECHNOLOGY SLOC</p>
+                <p>Address: BRGY. MAGPAPALAYOK, SAN LEONARDO, NUEVA ECIJA</p>
+                <p>Birthday: MAY 22, 2004</p>
+                <p>Age: 19 YEARS OLD</p>
+                <a href="mailto:pactaoivy24@gmail.com" target="_blank" title="To email this person">Email: pactaoivy24@gmail.com</a>
+                <p>Contact No.: 0936-635-5686</p>
+            </div>
+            <div class="researcher-info3">
+                <img src="maylyn.jpeg" alt="maylyn"><br>
+                <a href="https://www.facebook.com/maylyn.mendoza.980" target="maylyn" title="This takes you to Facebook page">Name: MAYLYN AMARO MENDOZA</a>
+                <p>School: NUEVA ECIJA UNIVERSITY OF SCIENCE AND TECHNOLOGY SLOC</p>
+                <p>Address: BRGY. SAN BARTOLOME, SAN LEONARDO NUEVA ECIJA</p>
+                <p>Birthday: MAY 30, 2004</p>
+                <p>Age: 19 YEARS OLD</p>
+                <a href="mailto:maylynmendoza28@gmail.com" target="_blank" title="To email this person">Email: maylynmendoza28@gmail.com</a>
+                <p>Contact No.: 0965-766-1588</p>
+            </div>
+        
+    </section>
+
+    <script>
+
+            //section
+            function showSection(sectionId) {
+           
+           document.querySelectorAll('section').forEach(section => {
+               section.style.display = 'none';
+           });
+
+           
+           document.getElementById(sectionId).style.display = 'block';
+
+          S
+       }
+
+        //calculator
+      const display = document.getElementById('display');
+
+function appendCharacter(char) {
+    display.value += char;
+}
+
+function appendOperator(operator) {
+    const lastChar = display.value.slice(-1);
+    if (lastChar !== '+' && lastChar !== '-' && lastChar !== '*' && lastChar !== '/') {
+        display.value += operator;
+    }
+}
+
+function appendDecimal() {
+    const lastChar = display.value.slice(-1);
+    if (!display.value.includes('.') && (lastChar !== '+' && lastChar !== '-' && lastChar !== '*' && lastChar !== '/')) {
+        display.value += '.';
+    }
+}
+
+function calculate() {
+    try {
+        display.value = eval(display.value);
+    } catch (error) {
+        display.value = 'Error';
+    }
+}
+
+function clearDisplay() {
+    display.value ='';
+}
+
+
+        //converter
+        function convertLength() {
+            var inputLength = parseFloat(document.getElementById("inputLength").value);
+            var fromUnit = document.getElementById("fromUnit").value;
+            var toUnit = document.getElementById("toUnit").value;
+            var result;
+
+            if (fromUnit === "inches" && toUnit === "centimeters") {
+                result = inputLength * 2.54;
+            } else if (fromUnit === "inches" && toUnit === "meters") {
+                result = inputLength * 0.0254;
+            } else if (fromUnit === "inches" && toUnit === "kilometers") {
+                result = inputLength * 0.0000254;
+            } else if (fromUnit === "centimeters" && toUnit === "inches") {
+                result = inputLength * 0.393701;
+            } else if (fromUnit === "centimeters" && toUnit === "meters") {
+                result = inputLength * 0.01;
+            } else if (fromUnit === "centimeters" && toUnit === "kilometers") {
+                result = inputLength * 0.00001;
+            } else if (fromUnit === "meters" && toUnit === "inches") {
+                result = inputLength * 39.3701;
+            } else if (fromUnit === "meters" && toUnit === "centimeters") {
+                result = inputLength * 100;
+            } else if (fromUnit === "meters" && toUnit === "kilometers") {
+                result = inputLength * 0.001;
+            } else if (fromUnit === "kilometers" && toUnit === "inches") {
+                result = inputLength * 39370.1;
+            } else if (fromUnit === "kilometers" && toUnit === "centimeters") {
+                result = inputLength * 100000;
+            } else if (fromUnit === "kilometers" && toUnit === "meters") {
+                result = inputLength * 1000;
+            } else {
+                let result = "input lenght"; 
+
+            }
+
+            document.getElementById("result").value = result.toFixed(2);
+        }
+     
+    </script>
+</body>
+</html>

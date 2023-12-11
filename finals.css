@@ -1,0 +1,107 @@
+#home1{
+  text-align:justify ;
+  display: block;
+}
+img{
+  width: 200px;
+  height: 200px;
+}
+table{
+  border:2px solid black;
+}
+h1{
+  text-align: center;
+  color: whitesmoke;
+}
+h3,h4,p,a{
+  color: white;
+}
+img{
+  width: 200px;
+  height: 200px;
+}
+section {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: none; /* Initially hide all sections */
+}
+nav {
+  background-color: rgba(2, 2, 24, 0.5);
+  color: white;
+  padding: 1em;
+  text-align: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-weight: bold;
+  cursor: pointer;
+}
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("math.jpeg.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    text-align: center;
+}
+
+header {
+  background-color: rgba(2, 2, 24, 0.5);
+  color: #fff;
+  padding: 1em;
+}
+section {
+  max-width: fit-content;
+  margin: 2em auto;
+  padding: 1em;
+  background-color: rgba(2, 2, 24, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+input,
+button {
+  margin: 5px;
+  padding: 10px;
+  font-size: 16px;
+}
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+}
+
+#converter {
+  max-width: fit-content;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+#inputLength{
+  background-color: #918d8d;
+  color: white;
+}
+::placeholder{
+  color: white;
+}
+#fromUnit{
+  background-color: #918d8d;
+  color: white;
+}
+#toUnit{
+  background-color: #918d8d;
+  color: white;
+}
+#result{
+  background-color: #918d8d;
+  color: white;
+}
